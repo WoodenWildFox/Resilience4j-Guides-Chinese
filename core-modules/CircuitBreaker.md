@@ -88,7 +88,7 @@ CircuitBreakerRegistry circuitBreakerRegistry =
 | 配置属性                                          | 默认值                                                       | 描述                                                         |
 | ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | failureRateThreshold                              | 50                                                           | 以百分比配置失败率阈值。当失败率等于或大于阈值时，断路器状态并关闭变为开启，并进行服务降级。 |
-| slowCallRateThreshold                             | 100                                                          | 以百分比的方式配置，断路器把调用时间大于`slowCallDurationThreshold`的调用视为满调用，当慢调用比例大于等于阈值时，断路器开启，并进行服务降级。 |
+| slowCallRateThreshold                             | 100                                                          | 以百分比的方式配置，断路器把调用时间大于`slowCallDurationThreshold`的调用视为慢调用，当慢调用比例大于等于阈值时，断路器开启，并进行服务降级。 |
 | slowCallDurationThreshold                         | 60000 [ms]                                                   | 配置调用时间的阈值，高于该阈值的呼叫视为慢调用，并增加慢调用比例。 |
 | permittedNumberOfCallsInHalfOpenState             | 10                                                           | 断路器在半开状态下允许通过的调用次数。                       |
 | maxWaitDurationInHalfOpenState                    | 0                                                            | 断路器在半开状态下的最长等待时间，超过该配置值的话，断路器会从半开状态恢复为开启状态。配置是0时表示断路器会一直处于半开状态，直到所有允许通过的访问结束。 |
